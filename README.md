@@ -11,5 +11,3 @@
 { "email": "testemail@overonix.com", "password": "reallyStrongPassword" }</code> NOTE: The <code>HOST/SERVER_IP</code> will be the <code>IP</code> of your local machine/box in this case.
    
 Kindly reach out to if you encounter any issue running this service. <b>Email: </b><code>akobundumichael94@gmail.com</code>
-   
-Written/Implemented with :heart:
