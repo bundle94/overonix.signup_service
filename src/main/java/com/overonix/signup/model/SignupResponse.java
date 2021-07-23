@@ -1,18 +1,14 @@
 package com.overonix.signup.model;
 
-import javax.validation.constraints.NotBlank;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-public class SignupRequest extends BaseRequest {
-    @NotBlank(message = "Email is required")
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
+public class SignupResponse extends BaseResponse{
+
     private String email;
-
-    @NotBlank(message = "Password is required")
     private String password;
-
-    public SignupRequest(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
 
     public String getEmail() {
         return email;

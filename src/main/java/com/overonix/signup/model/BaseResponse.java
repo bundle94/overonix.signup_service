@@ -1,19 +1,17 @@
 package com.overonix.signup.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.UUID;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class BaseResponse {
 
-    private boolean published = false;
     private UUID uuid = null;
+    private String message;
 
-    public boolean isPublished() {
-        return published;
-    }
-
-    public void setPublished(boolean published) {
-        this.published = published;
-    }
 
     public UUID getUuid() {
         return uuid;
@@ -21,5 +19,13 @@ public class BaseResponse {
 
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
